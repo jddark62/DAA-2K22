@@ -2,9 +2,21 @@
 #include <algorithm>
 #include <vector>
 #include <iterator>
+// Moore Voting Algorithm
+int majorityElement(std::vector<int>& nums) 
+{
+        int counter = 0, majority;
+        for (int num : nums) {
+            if (!counter) {
+                majority = num;
+            }
+            counter += num == majority ? 1 : -1;
+        }
+        return majority;
+}
 //Since the majority element appears more than n / 2 times, the n / 2-th element is the majority
 //A partial sort by nth element is done.
-int majorityElement(std::vector<int>& nums) 
+int majorityElementPartial(std::vector<int>& nums) 
 {
         std::nth_element(nums.begin(), nums.begin() + nums.size() / 2, nums.end());
         return nums[nums.size() / 2];
