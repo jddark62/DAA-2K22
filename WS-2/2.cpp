@@ -5,7 +5,6 @@ Describe an algorithm to find the kth smallest element
 in the union of A and B in O(logm+logn) time.
 */
 #include <iostream>
-using namespace std;
  
 int kth(int *arr1, int *arr2, int *end1, int *end2, int k)
 {
@@ -35,10 +34,10 @@ int kth(int *arr1, int *arr2, int *end1, int *end2, int k)
  
 int main()
 {
-    int arr1[5] = {2, 3, 6, 7, 9};
-    int arr2[4] = {1, 4, 8, 10};
+    int arr1[5] = {4, 5, 6, 5, 5};
+    int arr2[4] = {1, 2, 3, 4};
  
     int k = 5;
-    cout << kth(arr1, arr2, arr1 + 5, arr2 + 4,  k - 1);
+    std::cout << kth(arr1, arr2, arr1 + 5, arr2 + 4,  k - 1);
     return 0;
 }

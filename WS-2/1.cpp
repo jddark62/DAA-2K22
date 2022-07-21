@@ -35,7 +35,7 @@ int main(int argc, const char** argv) {
     std::cin >> target;
     if(binarySearch(vect, target))
     {
-    std::cout << "Element found.\n";
+        std::cout << "Element found.\n";
     }
     else
     {
