@@ -16,7 +16,6 @@ int main(){
     for(int w_i = 0;w_i < n;w_i++){
        cin >> w[w_i];
     }
-    // your code goes here
     sort(w.begin(), w.end());
     int i = 0;
     int count = 0;
